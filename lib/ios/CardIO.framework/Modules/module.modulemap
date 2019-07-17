@@ -1,0 +1,6 @@
+framework module CardIO {
+  umbrella header "CardIO.h"
+
+  export *
+  module * { export * }
+}

@@ -8,13 +8,18 @@ android {
 }
 
 dependencies {
-    compile 'com.braintreepayments.api:braintree:2.12.0'
-    compile 'com.braintreepayments.api:drop-in:3.3.0'
-    compile 'io.card:android-sdk:5.5.1'
+    api 'com.braintreepayments.api:braintree:2.+'
+    api 'com.braintreepayments.api:drop-in:3.+'
+    api 'com.google.android.gms:play-services-wallet:+'
+    api 'io.card:android-sdk:5.5.1'
 }
 
 def getPackageName() {
-    def config = file("res/xml/config.xml").getText()
+    def configFile = file("res/xml/config.xml")
+    if (!configFile.exists()) {
+      configFile = file("src/main/res/xml/config.xml")
+    }
+    def config = configFile.getText()
     def xml = new XmlParser(false, false).parseText(config)
     return xml.attribute("id")
 }

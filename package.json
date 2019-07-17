@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-braintree",
-  "version": "0.5.3",
+  "version": "0.6.6",
   "description": "A Cordova plugin for the Braintree mobile payment processing SDK.",
   "cordova": {
     "id": "cordova-plugin-braintree",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/taracque/cordova-plugin-braintree"
+    "url": "https://github.com/engineerapart/cordova-plugin-braintree"
   },
   "keywords": [
     "cordova",
@@ -23,6 +23,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "xcode": "1.0.0"
+    "xcode": "^2.0.0"
   }
 }

@@ -12,6 +12,7 @@ mkdir /tmp/braintree-sdk
 cd /tmp/braintree-sdk
 echo 'github "braintree/braintree_ios"' > Cartfile
 echo 'github "braintree/braintree-ios-drop-in"' >> Cartfile
+echo 'github "card-io/card.io-iOS-source"' >> Cartfile
 carthage update
 ```
 
