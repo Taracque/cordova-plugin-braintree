@@ -14,7 +14,11 @@ dependencies {
 }
 
 def getPackageName() {
-    def config = file("src/main/res/xml/config.xml").getText()
+    def configFile = new File("src/main/res/xml/config.xml");
+    if(!configFile.exists()){
+        configFile = new File("res/xml/config.xml");
+    }
+    def config = file(configFile).getText()
     def xml = new XmlParser(false, false).parseText(config)
     return xml.attribute("id")
 }
